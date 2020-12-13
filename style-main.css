@@ -41,7 +41,6 @@ body {
   background-color: #0a2351;
 }
 
-
 body::-webkit-scrollbar {
   width: 3px;
 }
@@ -175,7 +174,9 @@ Cards:
 
 .card a:focus,
 .card a:hover {
-  margin: -5px 5px 5px -5px;
+  margin: -5px 0 5px 0;
+  transition: 300ms ease;
+
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
