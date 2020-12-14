@@ -212,7 +212,7 @@ Card grid:
   @media screen and (min-width: 50em) {
     .cards {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       grid-gap: 1em;
     }
 
