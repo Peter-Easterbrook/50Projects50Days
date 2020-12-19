@@ -149,6 +149,37 @@ p {
   border-bottom: 1px solid white;
 }
 
+.text {
+  color: #fff;
+  font-weight: 400;
+}
+
+.speed {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  color: #fff;
+  width: 8rem;
+  position: absolute;
+  top: 6%;
+  left: 92%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  /* padding: 5px; */
+  font-size: 1rem;
+  background-color: #124198;
+  border: none;
+  text-align: center;
+  color: #fff;
+  width: 3rem;
+}
+
+input:focus {
+  outline: none;
+}
 /*--------------------------------------------------------------
 Cards:
 --------------------------------------------------------------*/
@@ -169,9 +200,7 @@ Cards:
 
 .card a {
   display: inline-block;
-
   color: #fff;
-
   text-align: center;
   text-decoration: none;
   border: 1px transparent;
@@ -184,7 +213,6 @@ Cards:
 .card a:hover {
   margin: -5px 0 5px 0;
   transition: 300ms ease;
-
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -210,37 +238,6 @@ Cards:
 
 .meta {
   padding-bottom: 1em;
-}
-
-.text {
-  color: #fff;
-  font-weight: 400;
-}
-
-.speed {
-  background-color: rgba(0, 0, 0, 0.1);
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 0.3rem;
-  color: #fff;
-  width: 8rem;
-  position: absolute;
-  top: 6%;
-  left: 94%;
-  transform: translate(-50%, -50%);
-}
-
-input {
-  padding: 5px;
-  font-size: 1rem;
-  background-color: #124198;
-  border: none;
-  text-align: center;
-  color: #fff;
-}
-
-input:focus {
-  outline: none;
 }
 
 /*--------------------------------------------------------------
