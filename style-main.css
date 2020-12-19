@@ -41,14 +41,21 @@ body {
   background-color: #0a2351;
 }
 
-body::-webkit-scrollbar {
-  width: 3px;
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
 }
-body::-webkit-scrollbar-track {
-  background: #ddd;
+::-webkit-scrollbar-thumb {
+  background: #8b92a5;
+  border-radius: 10px;
 }
-body::-webkit-scrollbar-thumb {
-  background: #aaa;
+::-webkit-scrollbar-thumb:hover {
+  background: #b5ccf6;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 
 body,
@@ -118,6 +125,7 @@ p {
 /* Header */
 
 .masthead {
+  height: 6rem;
   text-align: center;
   border-bottom: 1px solid #1b60dd;
   color: #fff;
@@ -202,6 +210,37 @@ Cards:
 
 .meta {
   padding-bottom: 1em;
+}
+
+.text {
+  color: #fff;
+  font-weight: 400;
+}
+
+.speed {
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.3rem;
+  color: #fff;
+  width: 8rem;
+  position: absolute;
+  top: 6%;
+  left: 94%;
+  transform: translate(-50%, -50%);
+}
+
+input {
+  padding: 5px;
+  font-size: 1rem;
+  background-color: #124198;
+  border: none;
+  text-align: center;
+  color: #fff;
+}
+
+input:focus {
+  outline: none;
 }
 
 /*--------------------------------------------------------------
