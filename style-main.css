@@ -38,7 +38,7 @@ Typography
 body {
   margin: 0;
   min-height: 100hv;
-  background-color: #0a2351;
+  background-color: #06142d;
 }
 
 ::-webkit-scrollbar {
@@ -129,7 +129,7 @@ p {
   text-align: center;
   border-bottom: 1px solid #1b60dd;
   color: #fff;
-  background-color: #0a2351;
+  background-color: #06142d;
 }
 
 /* Footer */
@@ -204,7 +204,7 @@ Cards:
   text-decoration: none;
   border: 1px transparent;
   transition: all 0.2s;
-  background-color: #0a2351;
+  background-color: #06142d;
   border-radius: 0.3rem;
   color: #6d9aed;
 }
