@@ -20,7 +20,7 @@ Accessibility
   color: #21759b;
   display: block;
   font-size: 14px;
-  font-weight: normal;
+  font-weight: 200;
   height: auto;
   left: 5px;
   line-height: normal;
@@ -34,39 +34,48 @@ Accessibility
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,300;1,400&display=swap');
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #1b60dd black;
+}
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
   min-height: 100hv;
   background-color: #06142d;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 6px;
   height: 6px;
 }
-::-webkit-scrollbar-thumb {
-  background: #8b92a5;
+body::-webkit-scrollbar-thumb {
+  background: #06142d;
   border-radius: 10px;
 }
-::-webkit-scrollbar-thumb:hover {
-  background: #b5ccf6;
+body::-webkit-scrollbar-thumb:hover {
+  background: #6d9aed;
 }
-::-webkit-scrollbar-track {
-  background: #ffffff;
+body::-webkit-scrollbar-track {
+  background: #1b60dd;
   border-radius: 10px;
-  box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 
 body,
 button,
-input,
-select,
-textarea {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 18px;
+input {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
   line-height: 1.5;
-  font-weight: 200;
 }
 
 h1,
@@ -75,13 +84,13 @@ h3,
 h4,
 h5,
 h6 {
+  font-weight: 100;
   clear: both;
   line-height: 1.3em;
 }
 
-.site-title,
-h2 {
-  font-weight: 300;
+.site-title {
+  font-weight: 100;
 }
 
 p {
@@ -94,7 +103,7 @@ address {
 
 pre {
   display: inline-block;
-  font-family: 'Courier 10 Pitch', Courier, monospace;
+  font-family: 'Raleway', sans-serif;
   color: #ddca7e;
   background: #282c34;
   padding: 0.5em 0.8em;
@@ -132,26 +141,9 @@ p {
   background-color: #06142d;
 }
 
-/* Footer */
-.colophon {
-  padding: 2em;
-  background: hsl(0, 0%, 10%);
-  color: white;
-  text-align: center;
-}
-
-.colophon a {
-  color: white;
-}
-
-.colophon a:hover,
-.colophon a:focus {
-  border-bottom: 1px solid white;
-}
-
 .text {
   color: #fff;
-  font-weight: 400;
+  font-weight: 100;
 }
 
 .speed {
@@ -207,6 +199,7 @@ Cards:
   background-color: #06142d;
   border-radius: 0.3rem;
   color: #6d9aed;
+  border: 1px solid #fff;
 }
 
 .card a:focus,
@@ -214,6 +207,7 @@ Cards:
   margin: -5px 0 5px 0;
   transition: 300ms ease;
   color: #fff;
+  border: none;
   box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.059),
     0 2.5px 5.3px rgba(0, 0, 0, 0.085), 0 4.6px 10px rgba(0, 0, 0, 0.105),
     0 8.3px 17.9px rgba(0, 0, 0, 0.125), 0 15.5px 33.4px rgba(0, 0, 0, 0.151),
@@ -230,7 +224,7 @@ Cards:
 }
 
 .date {
-  font-weight: normal;
+  font-weight: 200;
   font-size: 1.8em;
   line-height: 1em;
   color: #fff;
