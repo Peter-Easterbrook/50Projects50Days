@@ -19,3 +19,20 @@ function writeText() {
 }
 
 speedEl.addEventListener('input', (e) => (speed = 200 / e.target.value));
+
+// GSAP Animation
+gsap.set('.card', {
+  autoAlpha: 0,
+  transformOrigin: 'center',
+  scale: 0,
+});
+
+let heroTL = gsap.timeline({
+  defaults: {
+    stagger: { amount: 6 },
+    autoAlpha: 1,
+    scale: 1,
+    ease: 'back.out(0.8)',
+  },
+});
+heroTL.to('.card', {});
