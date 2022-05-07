@@ -23,7 +23,7 @@ speedEl.addEventListener('input', (e) => (speed = 200 / e.target.value));
 // GSAP Animation
 gsap.set('.card', {
   autoAlpha: 0,
-  transformOrigin: '50% 500%',
+  transformOrigin: '50% 10%',
   scale: 0,
 });
 

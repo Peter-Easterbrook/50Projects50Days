@@ -187,6 +187,7 @@ Cards:
 }
 
 .card {
+  visibility: hidden;
   margin-bottom: 1em;
 }
 
