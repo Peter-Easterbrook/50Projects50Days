@@ -205,7 +205,7 @@ Cards:
 .card a:hover {
   margin: -5px 0 5px 0;
   transition: 300ms ease;
-  color: #fff;  
+  color: #fff;
   box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.059),
     0 2.5px 5.3px rgba(0, 0, 0, 0.085), 0 4.6px 10px rgba(0, 0, 0, 0.105),
     0 8.3px 17.9px rgba(0, 0, 0, 0.125), 0 15.5px 33.4px rgba(0, 0, 0, 0.151),
@@ -244,8 +244,12 @@ Card grid:
 @supports (grid-area: auto) {
   @media screen and (min-width: 50em) {
     .cards {
+      --auto-grid-min-size: 26rem;
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(
+        auto-fill,
+        minmax(var(--auto-grid-min-size), 1fr)
+      );
       grid-gap: 1em;
     }
 
