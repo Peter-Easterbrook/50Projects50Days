@@ -41,6 +41,19 @@ Accessibility
   --clr-card-bg: hsl(0 0% 100%);
   --clr-text: hsl(0 0% 15%);
   --clr-heading: hsl(0 0% 25%);
+  --shadow-color: 0deg 0% 60%;
+  --shadow-elevation-medium: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.36),
+    0px 2px 2.3px -0.8px hsl(var(--shadow-color) / 0.36),
+    -0.1px 5px 5.6px -1.7px hsl(var(--shadow-color) / 0.36),
+    -0.2px 12.3px 13.8px -2.5px hsl(var(--shadow-color) / 0.36);
+  --shadow-elevation-high: 0px 0.6px 0.7px hsl(var(--shadow-color) / 0.34),
+    -0.1px 3.6px 4.1px -0.4px hsl(var(--shadow-color) / 0.34),
+    -0.1px 6.7px 7.5px -0.7px hsl(var(--shadow-color) / 0.34),
+    -0.2px 11px 12.4px -1.1px hsl(var(--shadow-color) / 0.34),
+    -0.3px 17.6px 19.8px -1.4px hsl(var(--shadow-color) / 0.34),
+    -0.4px 27.4px 30.8px -1.8px hsl(var(--shadow-color) / 0.34),
+    -0.7px 41.7px 46.9px -2.1px hsl(var(--shadow-color) / 0.34),
+    -1px 61.5px 69.2px -2.5px hsl(var(--shadow-color) / 0.34);
 }
 
 *,
@@ -124,14 +137,14 @@ address {
   margin: 0 0 1.5em;
 }
 
-pre {
+/* pre {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
   background: var(--clr-body-bg);
   color: var(--clr-text);
   padding: 0.5em 0.8em;
   border-radius: 0.2em;
-}
+} */
 
 figure {
   margin: 0;
@@ -151,9 +164,7 @@ General styling
   white-space: nowrap;
   width: 1px;
 }
-.color-picker {
-  z-index: 999;
-}
+
 .color-picker > fieldset {
   border: 0;
   display: flex;
@@ -163,7 +174,7 @@ General styling
   padding: 1rem 3rem;
   border-radius: 0 0 1rem 1rem;
   margin-inline: auto;
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--shadow-elevation-medium);
   border: 1px solid var(--clr-text);
 }
 
@@ -174,6 +185,9 @@ General styling
   border-radius: 50%;
   outline: 0.2rem solid var(--radio-color, currentColor);
   outline-offset: 0.2rem;
+}
+.color-picker input[type='radio']:hover {
+  cursor: url(favicon/glove2.png), auto;
 }
 
 .color-picker input[type='radio']:checked {
@@ -225,6 +239,9 @@ General styling
   --clr-text: hsl(209 50% 90%);
   --clr-heading: hsl(209 50% 80%);
 }
+.circle {
+  box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+}
 
 /* Header */
 
@@ -259,12 +276,15 @@ General styling
   top: 6%;
   left: 92%;
   border: 1px solid var(--clr-text);
-  box-shadow: var(--box-shadow);
   transform: translate(-50%, -50%);
+  transition: all 0.2s ease-out;
+}
+.speed:hover {
+  box-shadow: var(--shadow-elevation-medium);
 }
 
 input {
-  /* padding: 5px; */
+  padding: 5px;
   font-size: 1rem;
   background-color: var(--clr-card-bg);
   border: none;
@@ -311,13 +331,11 @@ Cards:
 
 .card a:focus,
 .card a:hover {
-  margin: -5px 0 5px 0;
-  transition: 300ms ease;
+  transform: translateY(-10px);
+  transition: all 0.3s ease-out;
   color: var(--clr-text);
-  box-shadow: 0 1px 2.2px rgba(0, 0, 0, 0.059),
-    0 2.5px 5.3px rgba(0, 0, 0, 0.085), 0 4.6px 10px rgba(0, 0, 0, 0.105),
-    0 8.3px 17.9px rgba(0, 0, 0, 0.125), 0 15.5px 33.4px rgba(0, 0, 0, 0.151),
-    0 37px 80px rgba(0, 0, 0, 0.21);
+  box-shadow: var(--shadow-elevation-high);
+  cursor: url(favicon/glove2.png), auto;
 }
 
 .time {
