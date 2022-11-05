@@ -180,6 +180,7 @@ General styling
 
 .color-picker input[type='radio'] {
   appearance: none;
+  /* background-color: #ccc; */
   width: 1.5rem;
   height: 1.5rem;
   border-radius: 50%;
@@ -240,7 +241,7 @@ General styling
   --clr-heading: hsl(209 50% 80%);
 }
 .circle {
-  box-shadow: inset 1px 1px 3px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: var(--shadow-elevation-high);
 }
 
 /* Header */
