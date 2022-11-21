@@ -71,7 +71,7 @@ body {
   min-height: 100vh;
   background: var(--clr-body-bg);
   color: var(--clr-text);
-  animation: fadeInAnimation ease-out 3s 1 forwards;
+  animation: fadeInAnimation 2s ease-out 1 forwards;
 }
 @keyframes fadeInAnimation {
   0% {
